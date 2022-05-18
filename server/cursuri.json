@@ -1,0 +1,36 @@
+[
+    {
+        "titlu": "Statistical Mechanics & Thermodynamics",
+        "descriere": "The Boltzmann distribution The Carnot cycle. Entropy. Heat engines Phase transitions. Thermodynamical models",
+        "module": [
+            {
+                "descriere": "ceva descriere",
+                "href": "http://google.com",
+                "autor": "J.P. John",
+                "tags": ["tagA", "tagB"]
+            }
+        ],
+        "points": [
+            "first talking point",
+            "second talking point",
+            "third talking point"
+        ]
+    },
+    {
+        "titlu": "Statistical Mechanics & Thermodynamics",
+        "descriere": "The Boltzmann distribution The Carnot cycle. Entropy. Heat engines Phase transitions. Thermodynamical models",
+        "module": [
+            {
+                "descriere": "ceva descriere",
+                "href": "http://google.com",
+                "autor": "J.P. John",
+                "tags": ["tagA", "tagB"]
+            }
+        ],
+        "points": [
+            "first talking point",
+            "second talking point",
+            "third talking point"
+        ]
+    }
+]
