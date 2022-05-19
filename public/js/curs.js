@@ -1,0 +1,1 @@
+window.HAS_CURS_PAGE = true

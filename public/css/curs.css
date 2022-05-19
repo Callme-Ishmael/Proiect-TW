@@ -1,0 +1,98 @@
+.content{
+    display: grid;
+    width:100%;
+    grid-template-areas: "titlu"
+                        "topics"
+                        "books"
+                        "links"
+                        "notes";
+    grid-template-rows: auto;
+}
+
+.titlu {
+    grid-area: titlu;
+    color: #f1f1f1;
+}
+
+.titlu  h2 {
+    margin-bottom: 1em;
+}
+
+.topics {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    grid-area: topics;
+
+    padding: 1em;
+    color: black;
+    background-color: cornsilk;
+    display: block;
+}
+
+.topics ul {
+    list-style-position: inside;
+}
+
+.topics li {
+    margin-bottom: 0.5em;
+    list-style-type: circle;
+    width: 100%;
+}
+
+.books{
+    grid-area:books;
+}
+ 
+.links {
+    grid-area: links;
+
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.link > a{
+    font-size: larger;
+    color: rgb(90, 11, 83);
+    font-weight: bolder;
+}
+
+.link > a:hover {
+    color: blue;
+}
+
+.notes{
+    grid-area: notes;
+}
+
+.modul {
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    width: 100%;
+
+    background-color: rgb(200, 242, 245);
+}
+
+.autor {
+    font-size: 0.9rem;
+    color: black;
+}
+
+.tags {
+    padding-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 0.25em;
+
+    margin-left: 1em;
+    margin-right: 1em;
+
+    border-radius: 5px;
+    border: 2px dashed purple;
+}

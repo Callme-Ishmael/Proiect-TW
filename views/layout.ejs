@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<%- header %> 
+
+<script src="js/layout.js" > </script>
+
+
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <footer class="foot">
+          <p class="current-time">
+            Time is currently: <span></span>
+          </p>
+          <p class="last-time">
+            Last visit on: <span></span>
+          </p>
+        </footer>
+
+
+        <div class="dropbar">
+        <nav>
+            <ul class="primary">
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="">Resources</a>
+                <ul class="sub">
+                  <li><a href="">Courses</a></li>
+                  <li><a href="/books.html">Books</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="">Other</a>
+                <ul class="sub">
+                  <li><a href="">Article</a></li>
+                  <li><a href="">Journals</a></li>
+                </ul>  
+              </li>
+              <li>
+                <a href="/FAQ.html">FAQ</a>
+              </li>
+              <li>
+                <a href="">Contact</a> 
+              </li>
+
+              <li class="dropbar-right" id="login-comp">
+                <a href="/login">Login / Register</a>
+              </li>
+
+              <li class="dropbar-right" id="logout-comp">
+                <a href="/user/logout">Logout</a>
+              </li>
+
+              <li class="dropbar-right" id="nume-comp">
+                <a href="#">Nume</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <aside class="sidebar">
+            <a class="active" href="#home">Filters</a>
+        </aside>
+            
+        <section class="content">
+            <%- body -%>
+        </section>
+
+    </div>
+    
+</body>
+
+</html>

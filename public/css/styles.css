@@ -1,28 +1,35 @@
 .wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "dropbar dropbar"
+                        "sidebar content"
+                        "sidebar foot";
+  grid-template-rows: min-content;
+  min-height: 100vh;
+  grid-template-columns: auto 6fr;
+}
+
+body {
+  margin: 0;
+  font-family: consolas;
+}
+
+.content{
     display: grid;
-    width: 100%;
-    grid-template-areas: "dropbar dropbar"
-                         "sidebar content"
-                         "sidebar foot";
-    grid-template-rows: auto 1fr 5fr 1fr;
-    grid-template-columns: auto 6fr;
-  }
-  
-  body {
-    margin: 0;
-    font-family: consolas;
-  }
-  
-  .content{
-      display: grid;
-      width:100%;
-      grid-template-areas: "titlu"
-                          "search"
-                          "carduri";
-      grid-template-rows: auto;
-  
-  }
-  
+    width:100%;
+    grid-template-areas: "titlu"
+                         "search"
+                         "carduri";
+    grid-template-rows: auto;
+
+}
+
+.foot  {
+  grid-area: foot;
+  color: white;
+  padding: 1em;
+}
+
   
   /* //////////////////// */
   .dropbar{
@@ -51,7 +58,7 @@
   
   a {
     text-decoration: none;
-    color: pink;
+    color: #f6d1d8;
     display: block;
   }
   
@@ -79,13 +86,13 @@
   nav {
     position: relative;
     background: #2B2B2B;
-    background-image: -webkit-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
-    background-image: -moz-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+    background-image: -webkit-linear-gradient(bottom, #b37fd5 7%, #390c33 100%);
+    /* background-image: -moz-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
     background-image: -o-linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
-    background-image: linear-gradient(bottom, #2B2B2B 7%, #333333 100%);
+    background-image: linear-gradient(bottom, #2B2B2B 7%, #333333 100%); */
     text-align: center;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 1px #0E0E0E;
+    text-shadow: 1px 1px 1px #f43a3a;
     -webkit-box-shadow: 2px 2px 3px #888;
     -moz-box-shadow: 2px 2px 3px #888;
     box-shadow: 2px 2px 3px #888;
@@ -112,7 +119,7 @@
   /* subs */
   ul.sub {
     position: absolute;
-    z-index: 200;
+    /* z-index: 200; */
     box-shadow: 2px 2px 0 #BEBEBE;
     width: 35%;
     display:none;
@@ -216,6 +223,10 @@
     grid-area: sidebar;
     background-color: #E2F9E5;
     min-width: 150px;
+    margin-top: 3em;
+    border: 2px solid #E2F9E5;
+    border-radius: 10px;
+    margin-left: 1em;
   }
   
   .sidebar a {
@@ -224,16 +235,21 @@
     padding: 16px;
     text-decoration: none;
     font-family: Roboto, sans-serif;
+    margin-top: 0.2em;
   }
    
   .sidebar a.active {
     background-color: #53093dfe;
     color: white;
+    border: 1px solid #53093dfe;
+    border-radius: 10px;
   }
   
   .sidebar a:hover:not(.active) {
     background-color: #555;
     color: white;
+    border: 1px solid #555;
+    border-radius: 10px;
   }
   
   div.content {
@@ -241,7 +257,7 @@
   
     padding: 0.8em;
     /* padding-top: 1em; */
-    height: 1000px;
+    /* height: 1000px; */
   }
   
   @media screen and (max-width: 700px) {
@@ -278,7 +294,7 @@
   .titlu {
       grid-area: titlu;
       color: #f1f1f1;
-  
+      margin: 2em;
   }
   
   .titlu > p {
@@ -307,7 +323,7 @@
   }
   
   body {
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background: #1d061a
   }
   
@@ -343,7 +359,7 @@
     text-decoration: none;
     background: #fff;
     border-radius: 8px;
-    transform: skewX(9deg);
+    transform: skewX(5deg);
     transition: 0.5s;
   }
   
@@ -357,7 +373,7 @@
     height: 100%;
     background: #fff;
     border-radius: 8px;
-    transform: skewX(9deg);
+    transform: skewX(5deg);
     transition: 0.5s;
     filter: blur(30px);
   }
@@ -479,6 +495,8 @@
     font-size: 2em;
     color: #fff;
     margin-bottom: 10px;
+    -webkit-text-stroke: 0.1px #F8F8F8;
+    text-shadow: 0px 1px 4px #4a3838;
   }
   
   .container .box .box-content p
@@ -486,6 +504,8 @@
     font-size: 1.1em;
     margin-bottom: 10px;
     line-height: 1.4em;
+    -webkit-text-stroke: 0.2px #F8F8F8;
+    text-shadow: 0px 1px 4px #000000;
   }
   
   .container .box .box-content a
@@ -535,12 +555,18 @@
     padding: 15px;
   }
   
-  /* Style the search box */
+
   #mySearch {
     width: 100%;
     font-size: 18px;
     padding: 11px;
     border: 1px solid rgb(229, 226, 226);
+    transition: width 2s;
+  }
+
+  #mySearch:hover {
+    width: 50%;
+    /* height: 300px; */
   }
   
   /* Style the navigation menu inside the left column */

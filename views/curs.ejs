@@ -1,0 +1,46 @@
+<div class="titlu">
+    <div>
+        <h2> <%= curs.titlu %> </h2> 
+    </div>
+    <div>
+        <p> <%= curs.descriere %> </p>
+    </div>
+</div>
+<div class="topics">
+    <ul>
+        <% for (var i = 0; i < curs.points.length; i++) { %>
+            <li> <%=  curs.points[i] %> </li>
+        <% } %>
+    </ul>
+</div>
+<div class="books">
+    
+</div>
+<div class="links">
+    <% for (let i = 0; i < curs.module.length; ++i) { %>
+        <div class="modul">
+            <div class="link">
+                <a href=" <%= curs.module[i].href %> ">
+                    <%= curs.module[i].descriere %>
+                </a>
+            </div>
+            <div class="autor">
+                <span> <%= curs.module[i].autor %> </span>
+            </div>
+            <div class="tags">
+                <% for (let j = 0; j < curs.module[i].tags.length; ++j) { %>
+                    <div class="tag"> <%= curs.module[i].tags[j] %> </div>
+                <% } %>
+            </div>
+        </div>
+    <% } %>
+</div>
+<div class="notes">
+</div>
+
+
+<%- contentFor('header') %>
+<link href="css/styles.css" rel="stylesheet">
+<link href="css/curs.css" rel="stylesheet">
+
+<script src="js/curs.js"> </script>
